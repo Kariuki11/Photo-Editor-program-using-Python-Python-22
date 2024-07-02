@@ -38,6 +38,7 @@ for filename in os.listdir(path):
         
         factor = 1.5
         enhancer = ImageEnhance.Contrast(edit)
+        edit = 
 
         # Extract the file name without extension
         clean_name = os.path.splitext(filename)[0]
