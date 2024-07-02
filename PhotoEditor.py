@@ -35,6 +35,9 @@ for filename in os.listdir(path):
 
         # Apply the sharpen filter to the image
         edit = img.filter(ImageFilter.SHARPEN).convert('L').rotate(-90)
+        
+        factor = 1.5
+        enhancer = ImageEnhance.Contrast(edit)
 
         # Extract the file name without extension
         clean_name = os.path.splitext(filename)[0]
