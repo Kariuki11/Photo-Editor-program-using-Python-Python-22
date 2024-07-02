@@ -41,3 +41,6 @@ for filename in os.listdir(path):
 
         # Save the edited image in the output directory
         edit.save(os.path.join(pathOut, f'{clean_name}_edited.jpg'))
+
+
+3:32
