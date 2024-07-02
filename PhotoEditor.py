@@ -34,13 +34,10 @@ for filename in os.listdir(path):
         img = Image.open(os.path.join(path, filename))
 
         # Apply the sharpen filter to the image
-        edit = img.filter(ImageFilter.SHARPEN)
+        edit = img.filter(ImageFilter.SHARPEN).convert('L').rotate(-90)
 
         # Extract the file name without extension
         clean_name = os.path.splitext(filename)[0]
 
         # Save the edited image in the output directory
         edit.save(os.path.join(pathOut, f'{clean_name}_edited.jpg'))
-
-
-3:32
